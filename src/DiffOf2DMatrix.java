@@ -6,8 +6,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class NewTest {
-
+public class DiffOf2DMatrix {
+    // Difference of diagonal of 2D Matrix
     public static void main(String... args) {
         List<List<Integer>> arr = new ArrayList<>();
         List<Integer> l1 = new ArrayList<>();
@@ -37,13 +37,16 @@ public class NewTest {
         int leftDiagonal = 0;
         int diff = 0;
         for (int i = 0; i < arr.size(); i++) {
-           /* rightDiagonal = rightDiagonal + arr.get(i).get(i);
-            leftDiagonal = leftDiagonal + arr.get(i).get(arr.size()-1-i);*/
-            System.out.println("\n");
+            rightDiagonal = rightDiagonal + arr.get(i).get(i);
+            leftDiagonal = leftDiagonal + arr.get(i).get(arr.size()-1-i);
+
+           //to print 2Dmatrix
+
            for (int j = 0 ;j<arr.get(i).size();j++){
 
                System.out.print(arr.get(i).get(j) +"\t");
            }
+            System.out.println("\n");
         }
         if(rightDiagonal>leftDiagonal){
             diff = rightDiagonal - leftDiagonal;
