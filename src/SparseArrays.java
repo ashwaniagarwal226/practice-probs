@@ -39,7 +39,9 @@ public class SparseArrays {
 
     public static int[] matchingStrings(String[] strings, String[] queries) {
         int[] result = new int[queries.length];
-        int k=0;
+        //With for Each
+
+        /*int k=0;
         for (String query : queries) {
             int count = 0;
             for (String s : strings) {
@@ -48,7 +50,19 @@ public class SparseArrays {
                 }
             }
             result[k++]=count;
+        }*/
+        //Without ForEach
+        for(int i = 0 ;i<queries.length;i++){
+            int count=0;
+            for(int j=0;j<strings.length;j++){
+                if(queries[i].equals(strings[j])){
+                    count++;
+                }
+            }
+            result[i]=count;
         }
+
+
         return result;
     }
 }
