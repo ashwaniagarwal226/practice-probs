@@ -46,7 +46,7 @@ public class CycleDetection {
         if (head.next == null) {
             return false;
         } else {
-            while (current.next != null) {
+            while (current != null) {
                 System.out.println(current.data);
                 //Checking if its present in set before add will return false
                 if (!check.add(current.next)) {

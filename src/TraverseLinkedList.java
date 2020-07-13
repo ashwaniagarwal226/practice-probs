@@ -17,9 +17,9 @@ public class TraverseLinkedList {
             ptr = ptr.next;
         } while (ptr.next != null);*/
 
-      while (current.next!=null){
+      while (current!=null){
           System.out.println(current.data);
-          current = current.next;
+          current = current .next;
       }
     }
 }
