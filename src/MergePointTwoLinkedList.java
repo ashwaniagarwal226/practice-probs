@@ -1,3 +1,6 @@
+import java.util.LinkedList;
+import java.util.List;
+
 public class MergePointTwoLinkedList {
     /*URL*/
     /*https://www.hackerrank.com/challenges/find-the-merge-point-of-two-joined-linked-lists/problem?h_r=next-challenge&h_v=zen*/
