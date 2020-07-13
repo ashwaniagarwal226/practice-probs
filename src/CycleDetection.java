@@ -27,10 +27,10 @@ public class CycleDetection {
         SinglyLinkedListNode singlyLinkedListNode2 = new SinglyLinkedListNode();
         SinglyLinkedListNode singlyLinkedListNode3 = new SinglyLinkedListNode();
 
-        singlyLinkedListNode2.data=2;
-        singlyLinkedListNode2.next=singlyLinkedListNode3;
-        singlyLinkedListNode3.data=3;
-        singlyLinkedListNode3.next=singlyLinkedListNode2;
+        singlyLinkedListNode2.data = 2;
+        singlyLinkedListNode2.next = singlyLinkedListNode3;
+        singlyLinkedListNode3.data = 3;
+        singlyLinkedListNode3.next = singlyLinkedListNode2;
 
         singlyLinkedListNode.data = 1;
         singlyLinkedListNode.next = singlyLinkedListNode2;
@@ -40,19 +40,19 @@ public class CycleDetection {
     }
 
     static boolean hasCycle(SinglyLinkedListNode head) {
-        SinglyLinkedListNode ptr =head;
+        SinglyLinkedListNode current = head;
         Set<SinglyLinkedListNode> check = new HashSet<>();
 
         if (head.next == null) {
             return false;
         } else {
-            while (ptr.next!=null ){
-                System.out.println(ptr.data);
+            while (current.next != null) {
+                System.out.println(current.data);
                 //Checking if its present in set before add will return false
-                if(!check.add(ptr.next)){
+                if (!check.add(current.next)) {
                     return true;
                 }
-                ptr=ptr.next;
+                current = current.next;
 
             }
 
