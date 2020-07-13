@@ -50,14 +50,15 @@ public class MergePointTwoLinkedList {
         SinglyLinkedListNode currentHead2 = head2;
         Set<SinglyLinkedListNode> check = new HashSet<>();
 
-        while (currentHead1 != null && currentHead2 != null) {
-
-            System.out.println(currentHead1.data);
+        while (currentHead1 != null) {
+            check.add(currentHead1);
             currentHead1 = currentHead1.next;
+        }
+        while(currentHead2 !=null){
+            if(!check.add(currentHead2)){
+                return currentHead2.data;
+            }
             currentHead2 = currentHead2.next;
-
-            System.out.println(currentHead1);
-            System.out.println(currentHead2);
         }
         return 0;
     }
