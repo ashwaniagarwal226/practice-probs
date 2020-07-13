@@ -23,6 +23,30 @@ public class MergePointTwoLinkedList {
     Do not read any input from stdin/console.
             The FindMergeNode(Node*,Node*) method has two parameters, and , which are the nonnull head Nodes of two separate linked lists that are guaranteed to converge.
 
+      SOLN:-
+      int FindMergeNode(Node headA, Node headB) {
+    Node currentA = headA;
+    Node currentB = headB;
+
+    //Do till the two nodes are the same
+    while(currentA != currentB){
+        //If you reached the end of one list start at the beginning of the other one
+        //currentA
+        if(currentA.next == null){
+            currentA = headB;
+        }else{
+            currentA = currentA.next;
+        }
+        //currentB
+        if(currentB.next == null){
+            currentB = headA;
+        }else{
+            currentB = currentB.next;
+        }
+    }
+    return currentB.data;
+}
+
 */
     public static void main(String... args) {
 
