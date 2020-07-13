@@ -1,5 +1,7 @@
+import java.util.HashSet;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Set;
 
 public class MergePointTwoLinkedList {
     /*URL*/
@@ -22,14 +24,41 @@ public class MergePointTwoLinkedList {
             The FindMergeNode(Node*,Node*) method has two parameters, and , which are the nonnull head Nodes of two separate linked lists that are guaranteed to converge.
 
 */
-    public static void main(String... args){
+    public static void main(String... args) {
 
+        SinglyLinkedListNode head = new SinglyLinkedListNode();
+        SinglyLinkedListNode singlyLinkedListNode3 = new SinglyLinkedListNode();
+        SinglyLinkedListNode singlyLinkedListNode2 = new SinglyLinkedListNode();
 
+        singlyLinkedListNode3.data = 3;
+        singlyLinkedListNode3.next = null;
+        singlyLinkedListNode2.data = 2;
+        singlyLinkedListNode2.next = singlyLinkedListNode3;
+        head.data = 1;
+        head.next = singlyLinkedListNode2;
+
+        SinglyLinkedListNode head2 = new SinglyLinkedListNode();
+        head2.data = 1;
+        head2.next = singlyLinkedListNode3;
+
+        findMergeNode(head, head2);
 
     }
 
     static int findMergeNode(SinglyLinkedListNode head1, SinglyLinkedListNode head2) {
+        SinglyLinkedListNode currentHead1 = head1;
+        SinglyLinkedListNode currentHead2 = head2;
+        Set<SinglyLinkedListNode> check = new HashSet<>();
 
-    return 0;
+        while (currentHead1 != null && currentHead2 != null) {
+
+            System.out.println(currentHead1.data);
+            currentHead1 = currentHead1.next;
+            currentHead2 = currentHead2.next;
+
+            System.out.println(currentHead1);
+            System.out.println(currentHead2);
+        }
+        return 0;
     }
 }
