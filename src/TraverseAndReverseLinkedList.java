@@ -13,16 +13,20 @@ public class TraverseAndReverseLinkedList {
     }
 
     public static void traverseList(SinglyLinkedListNode head) {
-        SinglyLinkedListNode current = head;
+        //SinglyLinkedListNode current = head;
 
       /*  do {
             System.out.println(ptr.data);
             ptr = ptr.next;
         } while (ptr.next != null);*/
 
-        while (current != null) {
+        /*while (current != null) {
             System.out.println(current.data);
             current = current.next;
+        }*/
+
+        for(SinglyLinkedListNode current=head ; current!=null ; current=current.next){
+            System.out.println(current.data);
         }
     }
 
