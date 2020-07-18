@@ -1,6 +1,3 @@
-import java.util.LinkedList;
-import java.util.List;
-
 public class InsertNodeDoublyLinkedList {
 
     /*https://www.hackerrank.com/challenges/insert-a-node-into-a-sorted-doubly-linked-list/problem*/
@@ -31,17 +28,30 @@ public class InsertNodeDoublyLinkedList {
         head.prev = null;
 
         sortedInsert(head, 5);
-        List e = new LinkedList();
+
+
     }
 
 
     static DoublyLinkedListNode sortedInsert(DoublyLinkedListNode head, int data) {
+        /*System.out.println(findIndexOfInsertion(head,data)+1);*/
+        DoublyLinkedListNode newNode= new DoublyLinkedListNode();
 
-        for (DoublyLinkedListNode current = head; current != null; current = current.next) {
-            System.out.println(current.data);
-        }
         return null;
     }
 
+    static DoublyLinkedListNode findIndexOfInsertion(DoublyLinkedListNode head, int data) {
+
+        int index = 0;
+        DoublyLinkedListNode current = head;
+        while (current != null) {
+            if (data > current.data && data < current.next.data) {
+                return current;
+            }
+            current = current.next;
+            index++;
+        }
+        return head;
+    }
 
 }
