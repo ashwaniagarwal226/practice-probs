@@ -35,6 +35,8 @@ public class Wissen {
     static public double getAverageRuns(String player) {
         // YOUR CODE HERE
         List<Integer> runs = data.get(player);
-        return runs.stream().mapToDouble(value -> value).average().orElse(0.0);
+
+        //return runs.stream().mapToDouble(value -> value).average().orElse(0.0);
+        return runs.stream().mapToDouble(value -> value).summaryStatistics().getAverage();
     }
 }
