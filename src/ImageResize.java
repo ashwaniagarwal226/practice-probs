@@ -9,14 +9,14 @@ public class ImageResize {
    /* private static final int IMG_WIDTH = 413;
     private static final int IMG_HEIGHT = 531;*/
 
-    private static final int IMG_WIDTH = 350;
-    private static final int IMG_HEIGHT = 350;
+    private static final int IMG_WIDTH = 331;
+    private static final int IMG_HEIGHT = 315;
 
     public static void main(String [] args){
 
         try{
 
-            BufferedImage originalImage = ImageIO.read(new File("D:\\Ashwani\\Documents\\moluDocs\\photo.jpg"));
+            BufferedImage originalImage = ImageIO.read(new File("D:\\Ashwani\\Documents\\moluDocs\\246879984.jpg"));
             int type = originalImage.getType() == 0? BufferedImage.TYPE_INT_ARGB : originalImage.getType();
 
             BufferedImage tThumbImage = new BufferedImage( IMG_WIDTH, IMG_HEIGHT, BufferedImage.TYPE_INT_RGB );
@@ -27,7 +27,7 @@ public class ImageResize {
             tGraphics2D.setRenderingHint( RenderingHints.KEY_INTERPOLATION, RenderingHints.VALUE_INTERPOLATION_BILINEAR );
             tGraphics2D.drawImage( originalImage, 0, 0, IMG_WIDTH, IMG_HEIGHT, null ); //draw the image scaled
 
-            ImageIO.write( tThumbImage, "jpg", new File("D:\\Ashwani\\Documents\\moluDocs\\photo_java2.jpg" ));
+            ImageIO.write( tThumbImage, "jpg", new File("D:\\Ashwani\\Documents\\moluDocs\\photo_java23.jpg" ));
 
             BufferedImage resizeImageJpg = resizeImage(originalImage, type);
             ImageIO.write(resizeImageJpg, "jpg", new File("D:\\Ashwani\\Documents\\moluDocs\\photo_java.jpg"));
