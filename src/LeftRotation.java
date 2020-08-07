@@ -24,7 +24,7 @@ public class LeftRotation {
             int aItem = Integer.parseInt(aItems[i]);
             a[i] = aItem;
         }*/
-        int a[] = {41,73,89,7,10,1,59,58,84,77,77,97,58,1,86,58,26,10,86,51};
+        int a[] = {41, 73, 89, 7, 10, 1, 59, 58, 84, 77, 77, 97, 58, 1, 86, 58, 26, 10, 86, 51};
         //         77,97,58,1,86,58,26,10,86,51,41,73,89,7,10,1,59,58,84,77
         int d = 10;
         getLeftRotationArray(a, d);
@@ -37,21 +37,18 @@ public class LeftRotation {
         Map<Integer, Integer> indexMap = new LinkedHashMap<>();
 
         for (int i = 0; i < n; i++) {
-            indexMap.put(a[i], (i - d));
-        }
-        //map is replacing duplicate key values handle that
-        indexMap.replaceAll((integer, integer2) -> {
-            if (integer2 < 0) {
-                integer2 = n + integer2;
+            int finalIndex = i - d;
+            if (finalIndex < 0) {
+                finalIndex = n + finalIndex;
             }
-            return integer2;
-        });
+            indexMap.put(finalIndex, a[i]);
+        }
         indexMap.forEach((integer, integer2) -> {
 
-            finalarr[indexMap.get(integer)] = integer;
+            finalarr[integer] = indexMap.get(integer);
         });
-        Arrays.stream(finalarr).forEach(s->{
-            System.out.print(s+" ");
+        Arrays.stream(finalarr).forEach(s -> {
+            System.out.print(s + " ");
         });
         return finalarr;
     }
