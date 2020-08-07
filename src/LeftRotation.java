@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.Scanner;
 
 public class LeftRotation {
+    // https://www.hackerrank.com/challenges/array-left-rotation/problem
 
     private static final Scanner scanner = new Scanner(System.in);
 
