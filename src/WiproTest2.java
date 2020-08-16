@@ -5,7 +5,7 @@ import java.util.Map;
 public class WiproTest2 {
 
     public static void main(String[] args) {
-        int array[] = {10, 5, 70, 1};
+        int array[] = {10, 5, 50,98,33};
         int newArr[] = array.clone();
         char charAr[] = new char[array.length];
 
