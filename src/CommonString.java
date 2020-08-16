@@ -21,6 +21,14 @@ public class CommonString {
         if (input == 1) {
             System.out.println(h1);
         } else {
+            for (int i = 0; i < string1.length(); i++) {
+                String s = String.valueOf(string1.charAt(i));
+                if (h1.contains(s)) {
+                    result = result + s;
+                }
+
+            }
+
 
             for (int i = 0; i < string2.length(); i++) {
                 String s = String.valueOf(string2.charAt(i));
